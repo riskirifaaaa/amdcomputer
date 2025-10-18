@@ -7,7 +7,6 @@
   <meta name="description" content="AMD Komputer — toko komputer & servis di Jrebeng Lor, Probolinggo. Penjualan PC rakitan, perakitan, upgrade, service, dan sparepart.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ====== THEME ====== */
     :root {
       --bg: #05070f;
       --accent: #00bfff;
@@ -25,7 +24,6 @@
       position: relative;
     }
 
-    /* ====== BACKGROUND EFFECT ====== */
     body::before {
       content: '';
       position: fixed;
@@ -42,7 +40,6 @@
       100% { transform: translate(-25%, -25%); }
     }
 
-    /* ====== HEADER ====== */
     header {
       max-width: 1100px;
       margin: 0 auto;
@@ -91,7 +88,6 @@
     }
     nav a:hover::after { width: 100%; }
 
-    /* ====== HERO ====== */
     .hero {
       max-width: 1100px;
       margin: 30px auto;
@@ -154,7 +150,6 @@
       border: 1px solid rgba(0,191,255,0.4);
     }
 
-    /* ====== SECTION STYLES ====== */
     .section {
       max-width: 1100px;
       margin: 40px auto;
@@ -199,7 +194,14 @@
       box-shadow: 0 0 20px rgba(0,191,255,0.3);
     }
 
-    /* ====== FOOTER ====== */
+    /* ===== MAP STYLE ===== */
+    .map-container {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,191,255,0.2);
+    }
+
     footer {
       max-width: 1100px;
       margin: 60px auto 20px auto;
@@ -235,11 +237,12 @@
       <div class="intro">
         <span class="tag">Toko AMD Komputer • Probolinggo</span>
         <h2>AMD Komputer — Rakitan, Servis, & Laptop Terpercaya di Jrebeng Lor</h2>
-    <p>
-      Kami menyediakan <b>PC rakitan custom</b> untuk gaming dan kerja profesional, 
-      <b>jual laptop baru & bekas</b> berkualitas, serta layanan <b>servis cepat bergaransi</b>.  
-      Lengkap juga dengan <b>sparepart original</b> seperti SSD, RAM, VGA, dan aksesoris komputer/Laptop Lainya Kita Sudah Lengkap
-    </p> <div class="actions">
+        <p>
+          Kami menyediakan <b>PC rakitan custom</b> untuk gaming dan kerja profesional, 
+          <b>jual laptop baru & bekas</b> berkualitas, serta layanan <b>servis cepat bergaransi</b>.  
+          Lengkap juga dengan <b>sparepart original</b> seperti SSD, RAM, VGA, dan aksesoris komputer/laptop lainnya — lengkap & terpercaya!
+        </p>
+        <div class="actions">
           <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
           <a href="#gallery" class="btn btn-outline">Lihat Galeri</a>
         </div>
@@ -262,8 +265,8 @@
           <p>Upgrade RAM, GPU, SSD, dan komponen lain untuk performa maksimal.</p>
         </div>
         <div class="service">
-          <h4>💡 Jual Beli Laptop</h4>
-          <p>Menerima Jual Beli Laptop Bekas Dan Baru/Segel</p>
+          <h4>💻 Jual Beli Laptop</h4>
+          <p>Menerima jual beli laptop baru & bekas dengan harga bersahabat.</p>
         </div>
       </div>
     </section>
@@ -277,7 +280,7 @@
         <img src="rakitan4.jpg" alt="">
       </div>
     </section>
-    <section id="gallery" class="section">
+       <section id="gallery" class="section">
       <h3>Galery Laptop Baru</h3>
       <div class="gallery">
         <img src="acerpink.jpg" alt="">
@@ -300,9 +303,22 @@
       <h3>Kontak & Lokasi</h3>
       <div class="card">
         <p>📍 Jrebeng Lor, Kecamatan Kotaanyar, Probolinggo, Jawa Timur</p>
-        <p>📱 WhatsApp: <a href="https://wa.me/6282229729238" style="color:var(--accent)">+628222972923</a></p>
-        <p>✉️ Email: <a href="Email:amdkomputer@gmail.com" style="color:var(--accent)">amdkomputer.probolinggo@example.com</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me/6282229729238" style="color:var(--accent)">+62 822-2972-9238</a></p>
+        <p>✉️ Email: <a href="mailto:amdkomputer@gmail.com" style="color:var(--accent)">amdkomputer@gmail.com</a></p>
       </div>
+
+ <div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.084790927926!2d113.22029407476533!3d-7.988562779446276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7ada046c156df%3A0x789c503f00f1183a!2sAMD%20KOMPUTER%20Jl.%20Sunan%20Ampel%20No.253%20Jrebeng%20Lor!5e0!3m2!1sid!2sid!4v1697262036950!5m2!1sid!2sid"
+    width="100%" 
+    height="350" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
     </section>
   </main>
 
@@ -312,4 +328,3 @@
 
 </body>
 </html>
-
