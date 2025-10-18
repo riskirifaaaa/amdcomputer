@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AMD Komputer • Jrebeng Lor, Probolinggo</title>
+  <meta name="description" content="AMD Komputer — toko komputer & servis di Jrebeng Lor, Probolinggo. Penjualan PC rakitan, perakitan, upgrade, service, dan sparepart.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ====== THEME ====== */
+    :root {
+      --bg: #05070f;
+      --accent: #00bfff;
+      --card: #0a0f1e;
+      --muted: #94a3b8;
+      --glow: 0 0 12px rgba(0,191,255,0.6);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #030511 0%, #050a18 100%);
+      color: #eaf2ff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ====== BACKGROUND EFFECT ====== */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(0,191,255,0.08) 0%, transparent 70%);
+      animation: moveGlow 15s linear infinite;
+      z-index: -1;
+    }
+    @keyframes moveGlow {
+      0% { transform: translate(-25%, -25%); }
+      50% { transform: translate(25%, 25%); }
+      100% { transform: translate(-25%, -25%); }
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(0,191,255,0.6));
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 20px;
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(0,191,255,0.6);
+    }
+    .brand p {
+      margin: 2px 0 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    nav a {
+      margin-left: 16px;
+      color: var(--muted);
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -3px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+    nav a:hover::after { width: 100%; }
+
+    /* ====== HERO ====== */
+    .hero {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 40px 20px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(0,191,255,0.05), rgba(255,255,255,0.01));
+      box-shadow: 0 0 20px rgba(0,191,255,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+    .hero .intro h2 {
+      margin: 0;
+      font-size: 28px;
+      color: #fff;
+    }
+    .hero p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(0,191,255,0.1);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(0,191,255,0.5);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 25px rgba(0,191,255,0.9);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(0,191,255,0.4);
+    }
+
+    /* ====== SECTION STYLES ====== */
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 0 8px rgba(0,191,255,0.1);
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .service {
+      background: linear-gradient(180deg, rgba(0,191,255,0.05), rgba(255,255,255,0.01));
+      padding: 14px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .service:hover {
+      box-shadow: 0 0 15px rgba(0,191,255,0.2);
+      transform: translateY(-4px);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,191,255,0.3);
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      max-width: 1100px;
+      margin: 60px auto 20px auto;
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid rgba(0,191,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <img src="LOGO AMD/logo merah putih.png" alt="Logo AMD Komputer">
+      </div>
+      <div>
+        <h1>AMD Komputer</h1>
+        <p>Jrebeng Lor, Probolinggo — Jual | Servis | Rakitan</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Layanan</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="intro">
+        <span class="tag">Toko AMD Komputer • Probolinggo</span>
+        <h2>AMD Komputer — Rakitan, Servis, & Laptop Terpercaya di Jrebeng Lor</h2>
+    <p>
+      Kami menyediakan <b>PC rakitan custom</b> untuk gaming dan kerja profesional, 
+      <b>jual laptop baru & bekas</b> berkualitas, serta layanan <b>servis cepat bergaransi</b>.  
+      Lengkap juga dengan <b>sparepart original</b> seperti SSD, RAM, VGA, dan aksesoris komputer/Laptop Lainya Kita Sudah Lengkap
+    </p> <div class="actions">
+          <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
+          <a href="#gallery" class="btn btn-outline">Lihat Galeri</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h3>Layanan Kami</h3>
+      <div class="services">
+        <div class="service">
+          <h4>🖥️ Rakitan PC</h4>
+          <p>Custom PC sesuai kebutuhan dan budget Anda (Gaming, Editing, Kantor).</p>
+        </div>
+        <div class="service">
+          <h4>⚙️ Servis & Perbaikan</h4>
+          <p>Perbaikan motherboard, PSU, fan, atau instalasi software & sistem operasi.</p>
+        </div>
+        <div class="service">
+          <h4>💡 Upgrade Hardware</h4>
+          <p>Upgrade RAM, GPU, SSD, dan komponen lain untuk performa maksimal.</p>
+        </div>
+        <div class="service">
+          <h4>💡 Jual Beli Laptop</h4>
+          <p>Menerima Jual Beli Laptop Bekas Dan Baru/Segel</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h3>Galeri Rakitan</h3>
+      <div class="gallery">
+        <img src="rakitan1.jpg" alt="">
+        <img src="rakitan2.jpg" alt="">
+        <img src="rakitan3.jpg" alt="">
+        <img src="rakitan4.jpg" alt="">
+      </div>
+    </section>
+    <section id="gallery" class="section">
+      <h3>Galery Laptop Baru</h3>
+      <div class="gallery">
+        <img src="acerpink.jpg" alt="">
+        <img src="asusvivo.jpg" alt="">
+        <img src="laptop.jpg" alt="">
+        <img src="asuslaptop.jpg" alt="">
+      </div>
+    </section>
+    <section id="gallery" class="section">
+      <h3>Galery Monitor</h3>
+      <div class="gallery">
+        <img src="monitor.jpg" alt="">
+        <img src="monitorrrr.jpg" alt="">
+        <img src="monitorr.jpg" alt="">
+        <img src="monitorrr.jpg" alt="">
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Kontak & Lokasi</h3>
+      <div class="card">
+        <p>📍 Jrebeng Lor, Kecamatan Kotaanyar, Probolinggo, Jawa Timur</p>
+        <p>📱 WhatsApp: <a href="https://wa.me/6282229729238" style="color:var(--accent)">+628222972923</a></p>
+        <p>✉️ Email: <a href="Email:amdkomputer@gmail.com" style="color:var(--accent)">amdkomputer.probolinggo@example.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 AMD Komputer • Dibuat oleh Riski — Jrebeng Lor, Probolinggo
+  </footer>
+
+</body>
+</html>
